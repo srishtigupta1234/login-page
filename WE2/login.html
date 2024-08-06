@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width:30%;
+            height:48%;
+            padding:5px;
+            margin: auto;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* margin-top: 10px; */
+        }
+        #me{
+            height:70px;
+            width:180px;
+            margin:auto;
+            margin-top:100px;
+
+        }
+        img{
+            height:70px;
+            width:180px
+        }
+        form>h1{
+            text-align: center;
+        }
+        h3{
+            margin-top:40px;
+            margin-left: 56px;
+            margin-bottom: 12px;
+        }
+        input{
+            padding: 15px;
+            width :70%;
+            margin-left:50px;
+            margin-top: -5px;
+            border-radius: 10px;
+            border: 1px solid grey;
+            margin-bottom: 10px;
+        }
+        button{
+           padding:15px;
+           width:72%;
+           margin-left:65px;
+           background-color: #fe0682;
+           color:white;
+           font-size: 20px;
+           font-family:Arial, Helvetica, sans-serif;
+           border-radius: 10px;
+           border: 1px solid grey;
+        }
+       h5{
+        text-align: center;
+        font-size: medium;
+       }
+    </style>
+</head>
+<body>
+    <div id="container"> 
+        <div id = "me">
+            <img src ="https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png"/></div>
+        <form id = "form">
+          <h1>Sign In</h1>
+          <h3>Phone number or email address *</h3>
+          <input type="text" id = "pore" placeholder="Enter phone number or email address ">
+          <br/>
+          <button id ="btn">CREATE ACCOUNT</button>
+          <h5>New user?  <a href="signup.html">Sign Up</a></h5>
+       </form>
+</body>
+</html>
+<script>
+    var arr = JSON.parse(localStorage.getItem("sample"))
+   
+    document.querySelector("#btn").addEventListener("click",login)
+   function login(){
+    event.preventDefault()
+     getin = form.pore.value;
+
+     arr.forEach(function(el){
+        if(getin == el.phone || getin == el.email){
+        alert("Login Succesfull")
+     }
+       else{
+        alert("Wrong information entered !!")
+     }
+    })
+     
+    
+   }
+
+   
+</script>
